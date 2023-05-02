@@ -15,9 +15,9 @@
  * Example: export const getPromise = (bool) = return <Your promise constructor code>
  */
 
-export const getPromise = (trueOrNot) => {
+export const getPromise = (resolveSwitch) => {
   const promise = new Promise((resolve, reject) => {
-    if (trueOrNot) {
+    if (resolveSwitch) {
       resolve("The PROMISE was RESOLVED");
     } else reject("The PROMISE was REJECTED");
   });
@@ -33,8 +33,8 @@ export const getPromise = (trueOrNot) => {
  * The handlePromise() function must be exported
  */
 
-export const handlePromise = (passedPromise) => {
-  return passedPromise.then(
+export const handlePromise = (promise) => {
+  return promise.then(
     (result) => result,
     () => "Uh Oh"
   );

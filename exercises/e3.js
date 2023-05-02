@@ -14,9 +14,9 @@
  * * getPromise(num) function must be exported
  * Example: export const getPromise(num) => return <Your code of promise>
  */
-export const getPromise = (argument) => {
-  if (Number.isInteger(argument)) {
-    const promise = new Promise((resolve, reject) => resolve(argument));
+export const getPromise = (maybeNumber) => {
+  if (Number.isInteger(maybeNumber)) {
+    const promise = new Promise((resolve, reject) => resolve(maybeNumber));
     return promise;
   } else {
     return 0;
